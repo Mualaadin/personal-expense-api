@@ -2,14 +2,39 @@
 
 A simple Flask API for tracking personal expenses and income.
 
+## 🚀 Docker Upgrade (New!)
+The API now supports Docker containerization with PostgreSQL database for better scalability and deployment.
+
+### Quick Start with Docker
+```bash
+# Start the application with database
+docker-compose up --build
+
+# Access the API at: http://localhost:5000
+```
+
+### New Features Added:
+- ✅ Docker containerization
+- ✅ PostgreSQL database
+- ✅ Environment variables configuration
+- ✅ Health check endpoint (`GET /health`)
+- ✅ Same API compatibility maintained
+
 ## Developer
 **Eid Muhammad**
 - Backend API Development (Flask)
-- Data Storage & Persistence (CSV)
+- Data Storage & Persistence (CSV → PostgreSQL + Docker Upgrade)
 - API Testing & Validation
 - Documentation & Deployment
+
 ## Installation
 
+### Option 1: Docker (Recommended)
+```bash
+docker-compose up --build
+```
+
+### Option 2: Traditional Setup
 1. Make sure you have Python 3.7+ installed
 2. Open the project folder in VSCode
 3. Open terminal in VSCode (Terminal → New Terminal)
@@ -51,6 +76,9 @@ Use Thunder Client or any API testing tool:
 
 #### GET /
 Returns API information and available endpoints.
+
+#### GET /health *(New!)*
+Check API and database connection status.
 
 #### POST /expenses
 Add a new expense.
@@ -107,6 +135,14 @@ GET http://localhost:5000/expenses/summary
 GET http://localhost:5000/expenses/monthly
 ```
 
-## Data Storage
-All data is stored in `expenses.csv` file. No database required. The file is automatically created when you first run the application.
+**Check health status:** *(New!)*
+```bash
+GET http://localhost:5000/health
+```
 
+## Data Storage
+**Upgraded from CSV to PostgreSQL database** for better reliability and scalability. The database is automatically initialized when using Docker Compose.
+
+### Environment Configuration *(New!)*
+The application now uses environment variables for database configuration:
+- `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`
