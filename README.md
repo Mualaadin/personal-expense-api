@@ -2,7 +2,7 @@
 
 A simple Flask API for tracking personal expenses and income.
 
-## 🚀 Docker Upgrade (New!)
+##  Docker Upgrade (New!)
 The API now supports Docker containerization with PostgreSQL database for better scalability and deployment.
 
 ### Quick Start with Docker
@@ -14,11 +14,11 @@ docker-compose up --build
 ```
 
 ### New Features Added:
-- ✅ Docker containerization
-- ✅ PostgreSQL database
-- ✅ Environment variables configuration
-- ✅ Health check endpoint (`GET /health`)
-- ✅ Same API compatibility maintained
+-  Docker containerization
+-  PostgreSQL database
+-  Environment variables configuration
+-  Health check endpoint (`GET /health`)
+-  Same API compatibility maintained
 
 ## Developer
 **Eid Muhammad**
@@ -146,3 +146,4 @@ GET http://localhost:5000/health
 ### Environment Configuration *(New!)*
 The application now uses environment variables for database configuration:
 - `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`
+
